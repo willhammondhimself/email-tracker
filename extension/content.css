@@ -1,0 +1,48 @@
+/* Styles for Email Tracker toggle in Gmail compose window */
+
+.email-tracker-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.email-tracker-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.email-tracker-toggle label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 13px;
+  color: #5f6368;
+  user-select: none;
+}
+
+.email-tracker-toggle input[type="checkbox"] {
+  margin: 0 6px 0 0;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.email-tracker-toggle input[type="checkbox"]:checked + span {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+/* Animation for notifications */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Tracker Dashboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>📧 Email Tracker</h1>
+      <button id="refreshBtn" class="refresh-btn" title="Refresh data">🔄</button>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <div class="stat-card">
+        <div class="stat-value" id="totalEmails">-</div>
+        <div class="stat-label">Total Sent</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="openedEmails">-</div>
+        <div class="stat-label">Opened</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="openRate">-%</div>
+        <div class="stat-label">Open Rate</div>
+      </div>
+    </div>
+
+    <!-- Connection Status -->
+    <div id="connectionStatus" class="connection-status">
+      <span class="status-indicator"></span>
+      <span class="status-text">Checking connection...</span>
+    </div>
+
+    <!-- Emails List -->
+    <div class="emails-section">
+      <h2>Recent Tracked Emails</h2>
+      <div id="emailsList" class="emails-list">
+        <div class="loading">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state" style="display: none;">
+      <p>📭 No tracked emails yet</p>
+      <p class="empty-state-hint">Compose an email in Gmail and enable tracking</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <button id="settingsBtn" class="footer-btn">⚙️ Settings</button>
+      <a href="https://mail.google.com" target="_blank" class="footer-btn">Open Gmail</a>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
