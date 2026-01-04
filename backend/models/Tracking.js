@@ -14,6 +14,10 @@ const openEventSchema = new mongoose.Schema({
   ip: {
     type: String,
     default: 'Unknown'
+  },
+  isSelf: {
+    type: Boolean,
+    default: false
   }
 });
 
@@ -37,6 +41,10 @@ const trackingSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
     required: true
+  },
+  senderIp: {
+    type: String,
+    default: 'Unknown'
   },
   opens: [openEventSchema],
   createdAt: {
